@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+        
+        .resume-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        
+        .header .title {
+            font-size: 1.2em;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+            font-size: 0.95em;
+        }
+        
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+        }
+        
+        .section-title {
+            font-size: 1.5em;
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .summary {
+            font-size: 1.05em;
+            color: #444;
+            line-height: 1.8;
+            text-align: justify;
+        }
+        
+        .job, .education-item, .project {
+            margin-bottom: 25px;
+        }
+        
+        .job-header, .education-header, .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .job-title, .degree, .project-name {
+            font-size: 1.15em;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .company, .institution {
+            font-size: 1em;
+            color: #667eea;
+            font-weight: 500;
+        }
+        
+        .date {
+            color: #666;
+            font-size: 0.9em;
+            font-style: italic;
+        }
+        
+        .tech-stack {
+            background: #f0f4ff;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            color: #667eea;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .skill-category {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .skill-category-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .skill-category-content {
+            color: #666;
+            font-size: 0.95em;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .resume-container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            
+            .header {
+                background: #667eea;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .job-header, .education-header, .project-header {
+                flex-direction: column;
+            }
+            
+            .date {
+                margin-top: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <div class="header">
+            <h1>VARUN TRIPATHI</h1>
+            <div class="title">Software Developer | AI/ML Enthusiast</div>
+            <div class="contact-info">
+                <span>📧 varuntrip99@gmail.com</span>
+                <span>📱 +91-9005515015</span>
+                <span>🔗 linkedin.com/in/varun31tripathi</span>
+                <span>💻 github.com/varun31tripathi</span>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">Professional Summary</h2>
+                <p class="summary">
+                    Computer Science student with hands-on experience in full-stack development, AI/ML integration, and business operations. Passionate about building intelligent web applications using modern technologies including React.js, TensorFlow.js, and OpenAI APIs. Proven ability to bridge technical solutions with business needs through internship and volunteer experience, with a focus on creating user-centric applications that solve real-world problems.
+                </p>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="education-item">
+                    <div class="education-header">
+                        <div>
+                            <div class="degree">Bachelor of Technology in Computer Science</div>
+                            <div class="institution">Babu Banarasi Das Institute of Technology and Management, Lucknow</div>
+                        </div>
+                        <div class="date">2022 – Present</div>
+                    </div>
+                    <ul>
+                        <li>Relevant Coursework: Data Structures, Algorithms, Web Development, Machine Learning, Database Management</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Experience</h2>
+                
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">INTERN</div>
+                            <div class="company">VVR Chemicals Pvt Ltd, Jaunpur</div>
+                        </div>
+                        <div class="date">September 2025 – Present</div>
+                    </div>
+                    <ul>
+                        <li>Coordinate organization and planning of company events, ensuring seamless execution and positive stakeholder engagement</li>
+                        <li>Utilize strong interpersonal communication skills to facilitate information flow across teams and departments</li>
+                        <li>Assist in program development and special event management initiatives</li>
+                        <li>Maintain operational facilities and support infrastructure to meet program requirements</li>
+                    </ul>
+                </div>
+                
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">INTERN</div>
+                            <div class="company">Bhargav Group of Companies</div>
+                        </div>
+                        <div class="date">July 2024 – August 2025</div>
+                    </div>
+                    <ul>
+                        <li>Analyzed and addressed sales performance challenges, implementing strategies to improve conversion rates</li>
+                        <li>Facilitated smooth coordination of goods transactions between multiple customers and working parties</li>
+                        <li>Built and maintained strong customer relationships, ensuring transparency between clients and sales representatives</li>
+                        <li>Served as liaison to enhance trust and communication between customer-facing teams and management</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Projects</h2>
+                
+                <div class="project">
+                    <div class="project-header">
+                        <div class="project-name">🧠 Emotion Recognition Web App</div>
+                    </div>
+                    <div class="tech-stack">Tech Stack: JavaScript, TensorFlow.js, face-api.js, HTML/CSS</div>
+                    <ul>
+                        <li>Developed a real-time facial emotion recognition web application capable of detecting and classifying human expressions</li>
+                        <li>Implemented live webcam-based video detection to identify emotions including happy, sad, angry, surprised, and neutral</li>
+                        <li>Built responsive frontend dashboard with live emotion probability overlays displayed directly on user video feed</li>
+                        <li>Leveraged pre-trained deep learning models for face detection and emotion classification, enabling browser-based processing without backend dependency</li>
+                    </ul>
+                </div>
+                
+                <div class="project">
+                    <div class="project-header">
+                        <div class="project-name">💬 AI Interview Assistant (Web Platform)</div>
+                    </div>
+                    <div class="tech-stack">Tech Stack: React.js, Node.js, OpenAI API, Express.js, MongoDB</div>
+                    <ul>
+                        <li>Created an AI-powered mock interview platform with dynamic question generation tailored to user's job role and skill set</li>
+                        <li>Integrated speech-to-text and text-based interaction for realistic real-time interview simulation</li>
+                        <li>Developed backend logic using GPT models for intelligent follow-up question generation and comprehensive interview analytics</li>
+                        <li>Designed intuitive dashboard UI for interview feedback visualization and performance tracking metrics</li>
+                    </ul>
+                </div>
+            </div>
+                       <div class="section">
+                <h2 class="section-title">Certifications</h2>
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Data Science Certification</div>
+                            <div class="company">Learnovate Enterprises</div>
+                        </div>
+                        <div class="date">2025</div>
+                    </div>
+                    <ul>
+                        <li>Comprehensive training in data analysis, statistical modeling, and machine learning algorithms</li>
+                        <li>Hands-on experience with Python libraries including NumPy, Pandas, and Scikit-learn</li>
+                    </ul>
+                </div>
+                
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Artificial Intelligence Certification</div>
+                            <div class="company">Learnovate Enterprises</div>
+                        </div>
+                        <div class="date">2025</div>
+                    </div>
+                    <ul>
+                        <li>Deep understanding of AI concepts including neural networks, deep learning, and natural language processing</li>
+                        <li>Practical implementation of AI models and deployment strategies</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <div class="skill-category-title">Programming Languages</div>
+                        <div class="skill-category-content">JavaScript, Python, Java, C++</div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-category-title">Frontend Development</div>
+                        <div class="skill-category-content">React.js, HTML5, CSS3, Responsive Design</div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-category-title">Backend Development</div>
+                        <div class="skill-category-content">Node.js, Express.js, RESTful APIs</div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-category-title">AI/ML Technologies</div>
+                        <div class="skill-category-content">TensorFlow.js, OpenAI API, face-api.js, Machine Learning</div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-category-title">Database</div>
+                        <div class="skill-category-content">MongoDB, MySQL, Database Design</div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-category-title">Tools & Technologies</div>
+                        <div class="skill-category-content">Git, GitHub, VS Code, Postman</div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-category-title">Soft Skills</div>
+                        <div class="skill-category-content">Communication, Team Collaboration, Event Planning, Customer Relationship Management</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
